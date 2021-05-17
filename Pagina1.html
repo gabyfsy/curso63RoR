@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 1</title>
+</head>
+
+<body>
+    <div>
+        <!--esto es un mensaje para el programador-->
+        <!--Títulos en HTML-->
+        <h1>¡Hola Mundo!</h1>
+        <h2>título en h2</h2>
+        <h3>título en h3</h3>
+        <h4>título en h4</h4>
+        <h5>título en h5</h5>
+        <h6>título en h6</h6>
+        <!--salto de línea-->
+        <br>
+        <!--dibujar línea horizontal a lo largo de la página-->
+        <hr>
+        <!--etiqueta p es para los párrafos-->
+        <p>lorem ipsum cnasncaosncoasnoajsdn <br>abfasfao asfasfnao jsfaisfha afihasifhasoh afdsafhafoa adfsuihafuasifa</p>
+        <pre> 
+            qwerty
+                asdfg
+                    zxcvb
+
+        </pre>
+        <!--pre son los preformatos que respetan los espacios que le damos en el código-->
+        <!--las imágenes se pueden cargar con la etiqueta img o desde css-->
+        <!--src es de "source", el origen o fuente de nuestra imagen-->
+        <!--a la etiqueta img se le puede agregar atributos como ancho y alto (width y height)-->
+        <img src="img/bomberoscastillo.jpg" alt="imagen o foto" width="300px" height="200px">
+        <!--alt se refiere a texto alternativo, en caso de que no cargue la imagen-->
+        <!--hipervínvulos se llaman con "a" que tiene un atributo dentro (href)-->
+        <br>
+        <a href="http://www.sii.cl"> SII </a>
+        <br>
+        <!--para que se abra la página en una nueva ventana-->
+        <a href="http://www.lun.com" target="_blank"> LUN </a>
+        <br>
+        <!-- para hacer un hipervínculo con una imagen, se llama la imagen como atributo -->
+        <a href="http://codingdojo.cl">
+            <img src="img/codingdojo.jpg" alt="Coding Dojo" width="100px">
+        </a>
+        <!--para que el hipervínculo se abra en otra pestaña, se ocupa el atributo "target"-->
+        <!--ol es ordered list, es decir, con números; ul es unordered list, con viñetas; li es list item-->
+        <ol>
+            <li>elemento 1</li>
+            <li>segundo elemento</li>
+        </ol>
+        <ul>
+            <li>elemento 1</li>
+            <li>segundo elemento</li>
+        </ul>
+        <br>
+        <ul>
+            <li>opción 1</li>
+            <li>opción 2</li>
+            <ul>
+                <li>opción 3</li>
+                <ul>
+                    <li>opción 4</li>
+                </ul>
+            </ul>
+        </ul>
+        <!--solo hay hasta 3 niveles de profundidad que son distintos por defecto-->
+        <!--las tablas nos permiten trabajar con elementos que, por ejemplo, vengan desde la base de datos-->
+        <table>
+            <!-- en el thead van los títulos de las tablas; recordar que las tablas se dibujan por filas y luego se cuentan las columnas como celdas-->
+            <thead>
+                <tr>
+                    <!-- table row o fila-->
+                    <!-- th son las celdas de la fila cabecera-->
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- td es dato de la tabla, table data; en el fondo, es el contenido de cada celda-->
+                    <td>1</td>
+                    <td>Israel</td>
+                    <td>Palma</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Gaby</td>
+                    <td>Figueroa</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <!-- en los formularios vamos a ingresar la información, la idea es poder tomar luego esa información y procesarla-->
+        <!--action define la ruta por la cual enviaremos la info; en este caso, no la usaremos; tampoco usaremos el atributo method... es más, form podría ir solo-->
+        <!--método POST evita que aparezca toda la información en la barra de dirección. Lo que hace es enviar la información oculta. GET: muestra en la url toda la información-->
+        <form action="" method="POST">
+            <!--acá se pueden incoporar varios elementos, como label (etiqueta), input (forma de ingreso de datos)-->
+            <!--el "for" tiene relación con el id que va en el input-->
+            <label for="nombre">Nombre</label> &nbsp;&nbsp;
+            <!-- el &nbsp agrega espacios y serviría para alinear sin usar css o tablas-->
+            <input type="text" id="nombre" name="nombre">
+            <!--es importante definir el tipo de datos que se ingresará en ese "input"; hay varias opciones, como botones, espacios de más texto, fecha, e-mail, etc-->
+            <!--el id es un identificador único para los elementos-->
+            <br>
+            <label for="apellido">Apellido</label>&nbsp;&nbsp;
+            <input type="text" id="apellido" name="apellido">
+            <br>
+            <input type="text" id="apellido2" name="apellido2">
+            <label for="apellido2">Apellido 2</label>
+            <br>
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password">
+            <!--si cambiamos el atributo en inspeccionar desde password a text, entonces va a mostrar los caracteres-->
+            <br>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email">
+            <br>
+            <!--los botones de tipo radio se usan para opciones únicas; una vez que lo selecciono, no lo puedo deshacer-->
+            <!--la importancia de ponerles el mismo "name" es para que se pueda cambiar la selección entre un botón y otro; en el fondo, son 3 opciones del mismo nombre-->
+            <label for="male">Masculino</label>
+            <input type="radio" id="male" name="sexo">
+            <label for="female">Femenino</label>
+            <input type="radio" id="female" name="sexo">
+            <br>
+            <input type="radio" id="other" name="sexo">
+            <label for="other">Otro</label>
+            <br>
+            <!--para el type checkbox, es el caso de opciones únicas, pero que se pueden des-seleccionar; en este tipo, se agrega el atributo "value" que define la info que va al backend-->
+            <label for="summer">Verano</label>
+            <input type="checkbox" id="summer" name="estaciones" value="verano">
+            <label for="fall">Otoño</label>
+            <input type="checkbox" id="fall" name="estaciones" value="fall">
+            <label for="winter">Invierno</label>
+            <input type="checkbox" id="winter" name="estaciones" value="winter">
+            <label for="spring">Primavera</label>
+            <input type="checkbox" id="spring" name="estaciones" value="spring">
+            <br>
+            <!--A continuación un espacio para seleccionar una de las opciones. Agregar el valor 0 o -1 puede ayudarnos a omitir la etiqueta (label)-->
+            <select id="lang" name="lang">
+                <option value="0">Seleccione un lenguaje</option>
+                <option value="html">HTML</option>
+                <option value="js">JavaScript</option>
+                <option value="css">CSS</option>
+            </select>
+            <br>
+            <label for="date">Fecha</label>
+            <input type="date" id="date" name="date">
+            <br>
+            <!-- para el cuadro te texto "textarea", se puede definir tamaño en cuanto a rows (filas) o cols (columnas); de todas maneras, el usuario puede cambiar el tamaño-->
+            <label for="descr">Descríbete</label>
+            <br>
+            <textarea id="descr" name="descr" cols=20 rows=8></textarea>
+        </form>
+    </div>
+</body>
+
+</html>
