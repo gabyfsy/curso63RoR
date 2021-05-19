@@ -13,37 +13,28 @@
 #header {
     min-height: 150px;
     background-color: green;
-    margin: 20px 0px;
 }
 
 #navigation {
     min-height: 300px;
     width: 200px;
     background-color: blue;
-    display: inline-block;
-    vertical-align: top;
-    margin: 0px 15px 0px 0px;
 }
 
 #main_content {
     min-height: 400px;
     width: 700px;
     background-color: red;
-    display: inline-block;
-    padding: 15px;
 }
 
 .subcontents {
     min-height: 200px;
     width: 210px;
     background-color: yellow;
-    display: inline-block;
-    margin-right: 10px;
 }
 
 #advertisement {
     min-height: 120px;
     width: 660px;
     background-color: purple;
-    margin-top: 20px;
 }
