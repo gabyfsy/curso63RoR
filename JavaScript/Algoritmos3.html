@@ -159,7 +159,29 @@
         y = printAverage([2, 5, 8]); //y = 5
         console.log(y); // should log 5
 
-        /**/
+        /*ejercicio 10*/
+        function returnOddArray() {
+            newArr = [];
+            for (var i = 1; i <= 255; i += 2) {
+                newArr.push(i);
+            }
+            return newArr; // your code here
+        }
+        y = returnOddArray();
+        console.log(y); // should log [1,3,5,...,253,255]
+
+        /*ejercicio 11*/
+        function squareValue(x) {
+            for (var i = 0; i < x.length; i++) {
+                x[i] = x[i] * x[i];
+            } // your code here
+            return x;
+        }
+        y = squareValue([1, 2, 3]);
+        console.log(y); // should log [1,4,9]
+
+        y = squareValue([2, 5, 8]);
+        console.log(y); // should log [4,25,64]
     </script>
 </head>
 
