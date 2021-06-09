@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script>
         //Ejercicio 1:
-        function cantMayores(x) { //x=5
+        function cantMayores(x) { //x.length=5
             arr2 = []
             for (var i = 0; i < arr.length; i++) {
                 if (arr[i] > y) {
@@ -58,21 +58,20 @@
         console.log(reemplazarNegativos(x))
             //fin
             //Ejercicio 4:
-        function removerRango(arr, a, b) { //no funciona... revisar!!!!
-            arr2 = []
-            for (var i = 0; i < x.lenght; i++) {
+        function removerRango(arr, a, b) {
+            let arr2 = [];
+            for (var i = 0; i < arr.length; i++) {
                 if (i < a) {
-                    arr2.push(x[i])
-                } else if (i > b) {
-                    arr2.push(x[i])
+                    arr2.push(arr[i]);
+                } else {
+                    if (i > b) {
+                        arr2.push(arr[i]);
+                    }
                 }
             }
-            return arr2
+            console.log(arr2);
         }
-        var x = [20, 30, 40, 50, 60, 70]
-        var y = 2
-        var z = 4
-        console.log(removerRango(x, y, z)) //no funciona :'-(
+        removerRango([20, 30, 40, 50, 60, 70], 2, 4)
     </script>
 </head>
 
