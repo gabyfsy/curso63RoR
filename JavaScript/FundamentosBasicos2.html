@@ -7,16 +7,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos Básicos II</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script>
+        //Ejercicio 1:
+        function reemplazarPositivos(array) //x.length=4
+        { //[-1,3,5,-5]
+            var nuevoArray = [];
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] > 0) { //preguntamos si es positivo
+                    nuevoArray.push("big");
+                } else {
+                    nuevoArray.push(array[i]); {}
+                    return nuevoArray;
+                }
+                console.log(reemplazarPosivitos([-1, 3, 5, -5]));
 
+
+                //Ejercicio 2:
+                function numeros(array) //[-1,3,5,-5]
+                {
+                    var numMayor = x[0];
+                    var numMenor = x[0];
+                    for (let i = 0; i < array.length, i++) {
+                        if (numMayor > x[i]) { //numero mayor=5
+                            numMayor = x[i];
+                        }
+                        if (numMenor < x[i]) {
+                            numMenor = x[i];
+                        }
+                    }
+                    console.log(numMenor);
+                    return numMayor;
+                }
+                numeros([-1, 3, 5, -5]);
+
+                //Ejercicio 3:
+                function imparPenultimo(array) //[-1,3,5,-5]
+                {
+
+                    console.log(array[array.length - 2]);
+                    for (let i = 0; i < array.length; i++) {
+                        if (array[i] % 2 != 0) {
+                            return array[i]
+                        }
+                    }
+                }
+                imparPenultimo([-1, 3, 5, -5]);
+
+                //Ejercicio 4:
+                function dobleVision(array) { //[1,2,3] debiera resultar en [2,4,6]
+                    var arrDoble = [];
+                    for (let i = 0; i < array.length; i++) {
+                        arrDoble.push(array[i] * 2);
+                    }
+                    console.log(arrDoble)
+                }
+                dobleVision([1, 2, 3]);
+
+                //Ejercicio 5:
+                function reempConteoPositivos(array) {
+                    var arr2 = [];
+                    var contador = 0
+                    for (let i = 0; i < array.length; i++) {
+
+                    }
+
+                }
+    </script>
 </head>
 
 <body>
 
     <h1>Fundamentos Básicos II</h1>
     <ol>
-
-
-
         <li><b>Tamaño Grande -</b> Dado un array, escribe una función que cambie todos los números positivos en él, por el string “big”. Ejemplo: grande([-1,3,5,-5]) devuelve [-1, “big”, “big”, -5]. Imprime (print) el menor, devuelve (return) el mayor - Crea
             una función que tome un array de números. La función debería imprimir (print) el menor valor del array, y devolver (return) el mayor. </li>
         <li><b>Imprime (print) uno, devuelve (return) otro-</b> Crea una función para un array de números. La función debería imprimir (print) el penúltimo valor y devolver (return) el primer valor impar.</li>
