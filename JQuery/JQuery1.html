@@ -8,11 +8,34 @@
     <title>JQuery</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
+        $(document).ready(function() {
+            $('button').click(function() {
+                console.log('Mi primer JQuery');
+                alert("Mi primer JQuery!!!!");
+            });
+            $('input').click(function() {
+                console.log('Desde el Input');
+                alert("Desde el Input!!!!");
+            });
+            $('#enviar3').click(function() {
+                console.log('Enviar desde el botón 3');
+                alert("Botón 3!!!!");
+            });
+            $('.enviar4').click(function() {
+                console.log('¿Botón 4?');
+                alert("...y un cuarto botón");
+            });
+        });
     </script>
 </head>
 
 <body>
-
+    <div>
+        <input type="button" value="enviar 1">
+        <button>enviar 2</button>
+        <input type="button" value="enviar 3" id="enviar3">
+        <input type="button" value="enviar 4" class="enviar4">
+    </div>
 </body>
 
 </html>
