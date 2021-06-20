@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Funciones JQuery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
@@ -42,15 +43,45 @@
 
             //html: cambia el contenido del elemento, incluso puede agregar html
             $('#parrafo4').click(function() {
-                $('#parrafo4').html("<span id=span1> texto </span>   <strong>de reemplazo</strong>");
+                $('#parrafo4').html("<span id=span1> Texto </span>   <strong>de reemplazo.</strong>");
                 $('#span1').addClass('colorred');
                 $('#span1').attr('name', 'span1');
 
-                $('#container').append('<img id=imagen1>');
-                $('#imagen1').attr('src', 'gato.jpg');
-                $('#imagen1').attr('width', '200');
+                $('#parrafo4').append('<br>', '<img class=imagen1>');
+                $('.imagen1').attr('src', 'ninja.jpg');
+                $('.imagen1').attr('width', '200');
             });
 
+            //probando los slide y fade
+            $('#boton5').click(function() {
+                $('#imagen2').slideDown(); //slide down
+            });
+            $('#boton6').click(function() {
+                $('#imagen2').slideUp(); //slide up
+            });
+
+            $('#boton7').click(function() {
+                $('#imagen2').slideToggle(); //slide toggle
+            });
+            $('#boton8').click(function() {
+                $('#imagen2').fadeIn("slow", function() {
+
+                }); //fade in
+            });
+            $('#boton9').click(function() {
+                $('#imagen2').fadeOut("slow", function() {
+
+                }); //fade out
+            });
+            $('#boton10').click(function() {
+                $('#parrafo6').before("Agrega antes cuando hago click.");
+            });
+            $('#boton11').click(function() {
+                $('#parrafo6').after("Agrega después todas las veces que hago click.", '<br>');
+            });
+            $('#boton13').click(function() {
+                $('#parrafo6').text("Reemplaza el texto por otro texto");
+            });
             //fin jquery
         });
     </script>
@@ -62,26 +93,48 @@
         .fondo {
             background-color: aquamarine;
         }
+        
+        #imagen2 {
+            width: 200px;
+        }
     </style>
 </head>
 
 <body>
     <div id="container">
-        <h1>Función Click y Text</h1>
-        <p id="parrafo1">clik en el botón para llamar al evento click</p>
+        <h1>Funciones Click y Text</h1>
+        <p id="parrafo1">Clik en el botón para llamar al evento click.</p>
         <button id="boton1">Click</button>
         <hr>
-        <h1>Función Hide, Show y Toggle</h1>
-        <p id="parrafo2">clik en el botón para ocultar el parrafo</p>
+        <h1>Funciones Hide, Show y Toggle</h1>
+        <p id="parrafo2">Haz clik en el botón para ocultar el párrafo.</p>
         <button id="boton2">Hide</button>
         <button id="boton3">Show</button>
         <button id="boton4">Toggle</button>
         <hr>
-        <h1>ADDCLASS</h1>
-        <p id="parrafo3">esto es un parrafo</p>
+        <h1>AddClass</h1>
+        <p id="parrafo3">Esto es un párrafo.</p>
         <hr>
         <h1>HTML</h1>
-        <p id="parrafo4">reemplazar el contenido</p>
+        <p id="parrafo4">Reemplazar el contenido.</p>
+        <hr>
+        <p id="parrafo5">Probando .slideDown, .slideUp, .slideToggle, fadeIn y fadeOut</p>
+        <img id=imagen2 src="ninja.jpg" alt="ninja">
+        <br>
+        <button id="boton6">slideUp</button>
+        <button id="boton5">slideDown</button>
+        <button id="boton7">slideToggle</button>
+        <button id="boton8">fadeIn</button>
+        <button id="boton9">fadeOut</button>
+        <hr>
+        <h1>Funciones .before, .after, .val y .text</h1>
+        <p id="parrafo6">
+            Este es otro párrafo para probar las funciones .before, .after y .text
+        </p>
+        <button id="boton10">.before</button>
+        <button id="boton11">.after</button>
+        <button id="boton13">.text</button>
+
 
     </div>
 </body>
