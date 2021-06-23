@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather API</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('button').click(function() {
+                var ciudad = $('#name').val();
+
+                $.get("https://api.openweathermap.org/data/2.5/weather?q=" + ciudad + "&APPID=57e8fd0385779d7545d45fadb8f37121", function(respuesta) {
+                    console.log(respuesta);
+                    var celcius = Math.round(respuesta.main.temp - 273.15);
+                    $('#respuestas').html('<h3>Ciudad: ' + respuesta.name + '</h3>');
+                    $('#respuestas').append('<p>Coordenadas: la longitud es ' + respuesta.coord.lon + ' y la latitud es ' + respuesta.coord.lat + '</p>');
+                    $('#respuestas').append('<p>Temperatura: ' + celcius + '° ' + '</p>');
+                }, 'json');
+            });
+            /* este texto viene de coding dojo
+            $('form').submit(function() { // your code here (build up your url)
+                $.get(url, function(res) { // your code here
+                }, 'json'); // don't forget to return false so the page doesn't refresh
+                return false;
+            }); */
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <input type="text" placeholder="Tu ciudad" id="name">
+        <button type="submit">Enviar</button>
+        <div id="respuestas">
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>
