@@ -12,7 +12,7 @@
             $('button').click(function() {
                 var ciudad = $('#name').val();
 
-                $.get("https://api.openweathermap.org/data/2.5/weather?q=" + ciudad + "&APPID=57e8fd0385779d7545d45fadb8f37121", function(respuesta) {
+                $.get("https://api.openweathermap.org/data/2.5/weather?q=" + ciudad + "&APPID=InsertAPI_Key", function(respuesta) {
                     console.log(respuesta);
                     var celcius = Math.round(respuesta.main.temp - 273.15);
                     $('#respuestas').html('<h3>Ciudad: ' + respuesta.name + '</h3>');
