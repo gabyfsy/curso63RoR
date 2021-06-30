@@ -1,0 +1,199 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    background-color: #eaeaea;
+    margin: 10px;
+    padding: 10px;
+}
+
+.container p {
+    font-family: Helvetica, sans-serif;
+}
+
+.header {
+    display: inline-block;
+    background-color: black;
+    color: #eaeaea;
+    font-family: Helvetica, sans-serif;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    width: 91%;
+}
+
+.header h2 {
+    display: inline-block;
+    margin-right: 350px;
+    font-family: Helvetica, sans-serif;
+}
+
+.header ul {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.header li {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.central {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+}
+
+.Intro {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5px;
+    padding: 5px;
+    width: 45%;
+}
+
+.Intro h1 {
+    font-family: Helvetica, sans-serif;
+}
+
+button {
+    background-color: black;
+    color: #eaeaea;
+    padding: 10px;
+    margin-left: 350px;
+    border-radius: 5px;
+    font-family: Helvetica, sans-serif;
+}
+
+.central img {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5px;
+    padding: 5px;
+    width: 45%;
+}
+
+.central p {
+    font-family: Helvetica, sans-serif;
+}
+
+.main {
+    display: inline-block;
+    width: 65%;
+}
+
+.main img {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.main h2 {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.central2 {
+    margin: 5px;
+    padding: 5px;
+}
+
+.card1 {
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+    margin: 10px;
+    padding: 10px;
+}
+
+.card2 {
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+    margin: 10px;
+    padding: 10px;
+}
+
+.card3 {
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+    margin: 10px;
+    padding: 10px;
+    text-align: left;
+}
+
+.side {
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+    background-color: cornsilk;
+    font-family: Helvetica, sans-serif;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.sidetext {
+    display: inline-block;
+    vertical-align: top;
+    width: 60%;
+}
+
+.side img {
+    display: inline-block;
+    vertical-align: top;
+    width: 35%;
+}
+
+.side a {
+    color: black;
+}
+
+.footer {
+    display: inline-block;
+    background-color: black;
+    color: #eaeaea;
+    font-family: Helvetica, sans-serif;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    width: 89%;
+}
+
+.footer li {
+    padding: 5px;
+    list-style-type: none;
+}
+
+.cuadro1 {
+    display: inline-block;
+    width: 33%;
+    vertical-align: top;
+}
+
+.cuadro2 {
+    display: inline-block;
+    width: 33%;
+    vertical-align: top;
+}
+
+.cuadro3 {
+    display: inline-block;
+    width: 33%;
+    vertical-align: top;
+}
+
+.enviar {
+    background-color: black;
+    color: cornsilk;
+    padding: 7px;
+}
+
+.footer h3 {
+    font-family: Helvetica, sans-serif;
+}
+
+#final {
+    text-align: center;
+}
