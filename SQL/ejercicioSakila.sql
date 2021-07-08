@@ -50,8 +50,6 @@ where customer.store_id = 1
 and address.address_id in (1, 42, 312, 459)
 ;
 
-
-
 -- 5. ¿Qué consulta realizarías para obtener todas las películas con una "calificación = G" y "característica especial = detrás de escena", unidas por actor_id = 15?
 -- Su consulta debe devolver el título de la película, la descripción, el año de lanzamiento, la calificación y la función especial. Sugerencia: puede usar la función LIKE para obtener la parte 'detrás de escena'.
 
@@ -96,3 +94,21 @@ INNER JOIN film_actor ON fc.film_id = film_actor.film_id)
 where category.category_id = 1
 and film_actor.actor_id = 23
 ;
+
+-- otra forma
+select * from film
+inner join film_category on film.film_id = film_category.film_id
+inner join film_actor on film.film_id = film_actor.film_id
+inner join category on film_category.category_id = category.category_id
+inner join actor on film_actor.actor_id = actor.actor_id
+where film_actor.actor_id = 23
+and category.category_id = 1 ;
+
+-- otra forma
+select * from film_actor
+INNER JOIN FILM ON film.film_id = film_actor.film_id
+INNER JOIN ACTOR ON actor.actor_id = film_actor.actor_id
+INNER JOIN film_category ON film_category.film_id = film.film_id
+INNER JOIN CATEGORY ON category.category_id= film_category.category_id
+where film_actor.actor_id = 23;
+
